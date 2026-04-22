@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thien Pham Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav style="background-image: url('my-logo.png'); background-size: cover; background-attachment: fixed;">
+        <div class="logo"><h2>Thien Pham</h2></div>
+        <div class="image_head">
+            <a href="index.html">
+                <img src="logo.png" alt="Tech Artist Logo">
+            </a>
+        </div>
+        <div class="nav-links">
+            <button onclick="showSection('home')">Home</button>
+            <button onclick="showSection('arts')">Arts</button>
+            <button onclick="showSection('code')">Code</button>
+            <button onclick="showSection('contact')">Contact</button>
+        </div>
+    </nav>
+
+    <main id="content-area">
+        <section id="home" class="active">
+            <h1>Technical Artist</h1>
+            <p>Bridging the gap between beautiful pixels and efficient pipelines.</p>
+        </section>
+
+        <section id="arts">
+            <h1>Visual Gallery</h1>
+            <div class="grid">
+                <div class="card"><a href="https://gamejolt.com/p/some-pixel-objects-i-drew-for-a-personal-project-tools-photoshop-sydrpu5m">Pixel WW2 Art</a></div>
+                <div class="card"><a href="https://gamejolt.com/p/cyber-punk-style-night-club-object-46zaiqcr">Pixel Cyper-Punk Girl</a></div>
+                <div class="card"><a href="https://gamejolt.com/p/rigging-the-2d-character-s-clothing-to-create-a-softer-more-fluid-qjfpirdq">Character Rigging</div>
+            </div>
+        </section>
+
+        <section id="code">
+            <h1>Tooling & Scripts</h1>
+            <pre><code>look_over_my_works</code></pre>
+            <div class="grid">
+                <div class="card"><a href="https://gamejolt.com/@ThienPhamQuang">water Shader</a></div>
+                <div class="card"><a href="https://gamejolt.com/p/simple-zoom-shader-for-unity-game-git-link-https-github-com-thie-n9yfcg62">zoom shader</a></div>
+                <div class="card">day-night cycle</div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h1>Get in Touch</h1>
+            <p>Email: pqthien1705@gmail.com</p>
+            <p>Phone: 832 406 6853</p>
+            <p>Gamejolt: <a href="https://gamejolt.com/@ThienPhamQuang">Gamejolt</a></p>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

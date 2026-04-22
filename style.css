@@ -1,0 +1,119 @@
+:root {
+    --bg: #0f0f0f;
+    --accent: #00f2ff;
+    --text: #ffffff;
+    --card-bg: #1a1a1a;
+}
+
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg);
+    color: var(--text);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem;
+    border-bottom: 1px solid #333;
+}
+
+.nav-links button {
+    background: none;
+    border: none;
+    color: var(--text);
+    margin-left: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.nav-links button:hover {
+    color: var(--accent);
+}
+
+main {
+    padding: 4rem 2rem;
+}
+
+section {
+    display: none; /* Hide all sections by default */
+    animation: fadeIn 0.5s ease;
+}
+
+section.active {
+    display: block; /* Only show the active one */
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+
+
+.card {
+    background: var(--card-bg);
+    padding: 40px;
+    border-radius: 8px;
+    border: 1px solid #333;
+    text-align: center;
+}
+
+@keyframes fadeIn {
+    from { opacity: 1; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.image_head {
+    position: relative;
+    display: flex;
+    align-items: center;     /* Vertically centers the logo */
+    justify-content: center;  /* Horizontally centers the logo */
+    width: 100px;  /* Match your logo size */
+    height: 100px; /* Match your logo size */
+
+    /* THE GLOW: 
+       Center is 100% opaque cyan, 
+       Middle is 10% opaque cyan, 
+       Edge is 0% (transparent) 
+    */
+    background: radial-gradient(
+        circle, 
+        rgba(0, 242, 255, 0.3) 0%, 
+        rgba(0, 242, 255, 0.1) 40%, 
+        rgba(0, 0, 0, 0) 70%
+    );
+
+    border-radius: 50%; /* Keeps the gradient perfectly circular */
+    animation: pulseGlow 3s infinite alternate ease-in-out;
+    
+}
+
+.image_head img {
+    height: 100px; /* Adjust based on your preference */
+    width: auto;
+    z-index: 2;   /* Ensures the logo sits 'in front' of the glow */
+    
+    /* Optional: adds a slight drop shadow to the logo itself 
+       to make it pop against the glow */
+    filter: drop-shadow(0 0 5px rgba(0,0,0,0.5));
+}
+
+.image_head {
+    /* ... keep previous styles ... */
+    animation: pulseGlow 3s infinite alternate ease-in-out;
+}
+
+@keyframes pulseGlow {
+    from {
+        transform: scale(1);
+        background: radial-gradient(circle, rgba(0, 242, 255, 0.2) 0%, rgba(0,0,0,0) 80%);
+    }
+    to {
+        transform: scale(1.1); /* Subtle grow */
+        background: radial-gradient(circle, rgba(0, 242, 255, 0.4) 0%, rgba(0,0,0,0) 75%);
+    }
+}
